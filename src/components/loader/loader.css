@@ -1,0 +1,85 @@
+body {
+  background: #2c2d44;
+  overflow: hidden;
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content {
+  height: 15rem;
+  width: 15rem;
+  /* background-color: #fff; */
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.spine {
+  height: 15rem;
+  width: 15rem;
+  /* background-color: #fff; */
+  position: absolute;
+  border-right: 0.2rem solid white;
+  border-radius: 50%;
+  animation: rot 2s infinite linear;
+}
+.content svg {
+  width: 100px;
+  height: 100px;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#path-1 {
+  animation: animation1 -0.8s linear 0.9s infinite alternate;
+}
+#path-2 {
+  animation: animation1 -0.9s linear 0.5s infinite alternate;
+}
+#path-3 {
+  animation: animation1 -1s linear 1s infinite alternate;
+}
+#path-4 {
+  animation: animation1 -0.5s linear 0.7s infinite alternate;
+}
+
+@keyframes animation1 {
+  0% {
+    opacity: 0;
+    fill: #000;
+  }
+  100% {
+    opacity: 1;
+    fill: #ffffff;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .content {
+    font-size: 1.5rem;
+  }
+  .spine {
+    height: 10rem;
+    width: 10rem;
+  }
+  .content svg {
+    width: 70px;
+    height: 70px;
+  }
+}
